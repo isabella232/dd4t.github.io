@@ -82,7 +82,7 @@
                         <hr class="star-light">
                         <span class="skills">DD4T 2.0 is about to be released</span>
                         <p>
-                          <a href="#" class="btn btn-lg btn-outline">
+                          <a href="#whatsnewModal" class="btn btn-lg btn-outline" data-toggle="modal">
                               What's new?
                           </a>
                         </p>
@@ -105,7 +105,7 @@
                     <p>DD4T enables the use of MVC frameworks (through MVC based interfaces) in Java and .NET by translating SDL Tridion components to MVC components.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-success">
+                    <a href="#aboutModal" class="btn btn-lg btn-success" data-toggle="modal">
                         Read more
                     </a>
                 </div>
@@ -129,9 +129,18 @@
                     <p>There are also instructions on how to setup your development environment, might you choose to contribute. </p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        Visit our wiki
-                    </a>
+                  <ul class="list-inline">
+                    <li>
+                      <a href="https://github.com/dd4t/DD4T.Core/wiki" target="_blank" class="btn btn-lg btn-outline">
+                          Visit our .NET wiki
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/dd4t/dd4t-2-java/wiki" target="_blank" class="btn btn-lg btn-outline">
+                          Visit our Java wiki
+                      </a>
+                    </li>
+                  </ul>
                 </div>
             </div>
         </div>
@@ -198,8 +207,8 @@
                     <p>DD4T is built by the community. So, we depend on people's own time to help develop new features and fix bugs. You can help too!</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#TODO" class="btn btn-lg btn-success">
-                        Join us!
+                    <a href="#contributeModal" class="btn btn-lg btn-success" data-toggle="modal">
+                        How to contribute
                     </a>
                 </div>
             </div>
@@ -214,7 +223,7 @@
                     <div class="footer-col col-md-4">
                         <h3>Blogs</h3>
                         <p>Lot's of people are blogging about DD4T. Find out who.</p>
-                        <a href="#TODO" class="btn btn-lg btn-outline">
+                        <a href="#blogsModal" class="btn btn-lg btn-outline" data-toggle="modal">
                             Read more
                         </a>
                     </div>
@@ -258,6 +267,166 @@
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
+    </div>
+
+    <div class="fullscreen-modal modal fade" id="whatsnewModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <div class="row">
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <h2>Whats's new</h2>
+                                <hr class="star-primary">
+                                <p>DD4T 2.0 has a couple of new features, bugfixes and changes.</p>
+                              </div>
+                              <div class="col-lg-4 col-lg-offset-2">
+                                <ul class="feature-list">
+                                  <li>JSON based models</li>
+                                  <li>ViewModels</li>
+                                  <li>JMS Caching Listener</li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-4">
+                                <ul class="feature-list">
+                                  <li>JSON based models</li>
+                                  <li>ViewModels</li>
+                                  <li>JMS Caching Listener</li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <p>If you have a feature request for our next version, please submit it on <a href="https://github.com/dd4t/">GitHub</a> or discuss it on <a href="https://groups.google.com/forum/#!forum/dynamic-delivery-4-tridion">Google Groups</a>.</p>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-modal modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <div class="row">
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <h2>About DD4T</h2>
+                                <hr class="star-primary">
+                                <p>Something more about DD4T</p>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-modal modal fade" id="blogsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <div class="row">
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <h2>DD4T blogs</h2>
+                                <hr class="star-primary">
+                                <p>There are a few people blogging about DD4T. Below is a complete list in alphabetical order.</p>
+                                <h3>In the spotlight</h3>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2">
+                                <ul>
+                                  <li><a href="http://thois.org/" target="_blank">Thois</a></li>
+                                  <li><a href="http://blog.trivident.com/" target="_blank">Trivident</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <h3>List</h3>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2">
+                                <ul>
+                                  <li><a href="http://thois.org/" target="_blank">Thois</a></li>
+                                  <li><a href="http://blog.trivident.com/" target="_blank">Trivident</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <p>If your blog is not on here, please leave a mention on our Google Group and we'll add it.</p>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-modal modal fade" id="contributeModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <div class="row">
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <h2>How to contribute</h2>
+                                <hr class="star-primary">
+                                <p>You can contribute in multiple ways:</p>
+                                <ul>
+                                  <li>Submit an issue or request a new feature on <a href="https://github.com/dd4t/">GitHub</a></li>
+                                  <li>Fork our code on <a href="https://github.com/dd4t/">GitHub</a></li>
+                                  <li>Check our issue/feature lists on GitHub</li>
+                                  <li>Develop a new feature</li>
+                                  <li>Submit a pull request</li>
+                                  <li>Join the discussion on <a href="https://groups.google.com/forum/#!forum/dynamic-delivery-4-tridion">Google Groups</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery -->
