@@ -237,3 +237,7 @@ footer .footer-below a.active {
 #contributeModal ul li .fa{
     margin-right: 0.5em;
 }
+
+blockquote.featured-quote {
+    border: none;
+}
