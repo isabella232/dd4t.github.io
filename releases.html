@@ -149,7 +149,7 @@
 						<h5>PageFactory now caches null results</h5>
 						If a page cannot be found, this 'null result' was never cached in previous versions of DD4T. This was a risk, because requests of non-existent pages would lead to (heavy) queries on the broker database every time.
 						Now, this null result is cached for a limited time. This time (in seconds) can be configured in the appSettings setting of the Web.config as follows:
-						<br/><br/>&lt;add key="DD4T.CacheSettings.Page404" value="60"/&gt; 
+						<br/><pre>&lt;add key="DD4T.CacheSettings.Page404" value="60"/&gt; </pre><br/>
 						
 						If you leave this out, the null result is cached for 30 seconds.
 
