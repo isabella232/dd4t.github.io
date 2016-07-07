@@ -134,9 +134,6 @@
 						SDL Web 8 (the latest version of Tridion) is supported in 2 ways: through the microservices API (aka the Content Interaction Library, through the package DD4T.Providers.SDLWeb8.CIL) and through the in-process API (through DD4T.Providers.SDLWeb8). 
 						Note that the introduction of the Content Interaction Library makes the DD4T Restservice and Rest provider obsolete. We recommend these features only for SDL Tridion 2013sp1 and older.
 
-						<h5>Consistent version numbering</h5>
-						All packages now have the same major and minor version number: 2.1.
-					
 						<h5>Binary caching</h5>
 						Binaries (images etcetera published from Tridion) are now cached in the same way as pages and component presentations. They are cached with a dependency on the underlying multimedia component. 
 						If you are using cache invalidation(see next topic), binaries are now automatically removed from the cache as soon as the multimedia component is published or unpublished.
@@ -149,9 +146,21 @@
 						Previous versions had a mandatory dependency on Log4net. This dependency was removed from DD4T.Core. You can still let DD4T log using Log4net, by adding a package reference to DD4T.Logging.Log4net. No configuration is necessary.
 						If you like NLog better, just add a package reference to DD4T.Logging.NLog. Or write your own implementation of the interface DD4T.ContentModel.Contracts.Logging.ILogger.
 
+						<h5>PageFactory now caches null results</h5>
+						If a page cannot be found, this 'null result' was never cached in previous versions of DD4T. This was a risk, because requests of non-existent pages would lead to (heavy) queries on the broker database every time.
+						Now, this null result is cached for a limited time. This time (in seconds) can be configured in the appSettings setting of the Web.config as follows:
+						<br/><br/>&lt;add key="DD4T.CacheSettings.Page404" value="60"/&gt; 
+						
+						If you leave this out, the null result is cached for 30 seconds.
+
+						<h5>PDB</h5>
+						Debug symbols are now packaged with DD4T, to make debugging considerably easier.
+						
 						<h5>Empty embedded fields</h5>
 						A bug which caused publishing to fail if you tried to publish empty embedded fields while the 'Publish empty fields' setting was switched on, has been fixed.
 						
+						
+						<br/><br/>
 					<h4>Warning for users of DD4T for Java</h4>
 					 <b>The templates in this release are not compatible with the latest DD4T for Java version (at this point 2.0.5). Please use <a href="https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.0.8">version 2.08 of the DD4T templates</a> if you're using the Java version!</b>
 					
