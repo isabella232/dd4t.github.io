@@ -146,6 +146,9 @@
 						Previous versions had a mandatory dependency on Log4net. This dependency was removed from DD4T.Core. You can still let DD4T log using Log4net, by adding a package reference to DD4T.Logging.Log4net. No configuration is necessary.
 						If you like NLog better, just add a package reference to DD4T.Logging.NLog. Or write your own implementation of the interface DD4T.ContentModel.Contracts.Logging.ILogger.
 
+						<h5>Empty embedded fields</h5>
+						A bug which caused publishing to fail if you tried to publish empty embedded fields while the 'Publish empty fields' setting was switched on, has been fixed.
+						
 					<h4>Warning for users of DD4T for Java</h4>
 					 <b>The templates in this release are not compatible with the latest DD4T for Java version (at this point 2.0.5). Please use <a href="https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.0.8">version 2.08 of the DD4T templates</a> if you're using the Java version!</b>
 					
