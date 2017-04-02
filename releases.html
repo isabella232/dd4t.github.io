@@ -122,6 +122,92 @@
                     <hr class="star-primary">
                 </div>
             </div>
+
+
+
+
+
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Release 2.2</h3>
+                    <h4>Platform</h4>
+                    This release contains .NET packages and Tridion templates.
+
+                    <h4>New features</h4>
+                    <h5>SDL Web 8.5 support</h5>
+                    SDL Web 8.5 (the latest version of Tridion) is supported in 2 ways:
+                    <ul>
+                        <li>Through the microservices API (aka the Content Interaction Library). To use this approach, you reference the package DD4T.Providers.SDLWeb8.CIL</li>
+                        <li>Through the in-process API. To use this approach, create a reference to the package DD4T.Providers.SDLWeb8</li>
+                    </ul>
+
+                    SDL Web 8 (8.1 / 8.1.1) are also supported through separate providers (DD4T.Providers.SDLWeb8 and DD4T.Providers.SDLWeb8.CIL).
+
+					<h5>NewtonSoft upgrade</h5>
+					Upgraded to NewtonSoft.JSON 10.0.1.
+
+					<h5>Enhanced keyword modelling</h5>
+					 Added Keyword.RelatedKeywords, Keyword.MetadataSchema, Keyword.IsRoot and Keyword.IsAbstract.
+
+					<h5>Enhanced target group modelling</h5>
+					Added IComponentPresentation.TargetGroupConditions to replace IComponentPresentation.Conditions. Before, only the keyword conditions inside the target group were modeled in 
+					the property IComponentPresentation.Conditions. That means that you miss possibly important information like the name of the
+					target group, whether or not a target group is a member of another target group, etc.
+					This is now all modeled in IComponentPresentation.TargetGroupConditions. The original Conditions property is obsolete but will still work.
+
+					<h5>Using an enum in your ViewModel</h5>
+					Introducing a new model attribute EnumField to model a keyword or text field as an enum.
+						
+					<h5>Improved handling of ECL in rich text</h5>
+					If you are linking to an ECL component from a rich text field, the external metadata of the ECL component is added as data attributes to the links in the rich text field.
+					
+					<h4>Fixed bugs</h4>
+					
+					<h5>Grey line around resized images</h5>
+					See <a href="https://github.com/dd4t/DD4T.MVC/issues/25">https://github.com/dd4t/DD4T.MVC/issues/25</a>.
+					
+                    <h5>Incorrect case when retrieving keywords</h5>
+					In some cases metadata was published in all lower case. This caused the TaxonomyProvider.GetKeyword method to fail. In this release, case of keyword names is ignored when calling GetKeyword.
+
+					<h5>Error in GetTemplateFragment</h5>
+					In previous versions we called the GetTemplateFragment method of the ECL item using 'null' as the Template Attributes parameter. This would break in some ECL connectors. We now pass an empty list instead.
+
+
+                    <br/><br/>
+                    <h4>Warning for users of DD4T for Java</h4>
+                    <b>The templates in this release are not compatible with the latest DD4T for Java version (at this point 2.0.7). Please use <a href="https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.1">version 2.1 of the DD4T templates</a> if you're using the Java version!</b>
+
+                    <h4>NuGet packages</h4>
+                    <ul>
+                        <li>DD4T.Model</li>
+                        <li>DD4T.Core</li>
+                        <li>DD4T.MVC</li>
+                        <li>DD4T.DI.Unity</li>
+                        <li>DD4T.DI.Ninject</li>
+                        <li>DD4T.DI.Autofac</li>
+                        <li>DD4T.Providers.SDLTridion2011sp1</li>
+                        <li>DD4T.Providers.SDLTridion2013</li>
+                        <li>DD4T.Providers.SDLTridion2013sp1</li>
+                        <li>DD4T.Providers.SDLWeb8</li>
+                        <li>DD4T.Providers.SDLWeb8.CIL</li>
+                        <li>DD4T.Providers.SDLWeb8.5</li>
+                        <li>DD4T.Providers.SDLWeb8.5.CIL</li>
+                        <li>DD4T.Caching.ApacheMQ</li>
+                        <li>DD4T.Logging.Log4net</li>
+                        <li>DD4T.Logging.NLog</li>
+                        <li>DD4T.RestService.WebApi</li>
+                        <li>DD4T.Providers.Rest</li>
+                    </ul>
+
+                    <h4>Download</h4>
+                    <ul>
+                        <li>Download the templates: <a href="https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.2">https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.2</a></li>
+                        <li>To use DD4T for .NET, reference the DD4T packages on <a href="https://www.nuget.org/profiles/dd4t">Nuget</a>, specifying version 2.2.</li>
+                    </ul>
+                </div>
+            </div>
+
+
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>Release 2.1</h3>
@@ -164,7 +250,7 @@
 
                     <br/><br/>
                     <h4>Warning for users of DD4T for Java</h4>
-                    <b>The templates in this release are not compatible with the latest DD4T for Java version (at this point 2.0.5). Please use <a href="https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.0.8">version 2.0.8 of the DD4T templates</a> if you're using the Java version!</b>
+                    <b>Please use DD4T for Java version 2.0.6 or higher with the templates v 2.1!</b>
 
                     <h4>NuGet packages</h4>
                     <ul>
