@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Chrome & Firefox OS -->
+    <meta name="theme-color" content="#13643e">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#13643e">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#13643e">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="DD4T" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://dd4t.org/" />
+
+    <meta property="og:title" content="DD4T - release 2.1" />
+    <meta property="og:description" content="DD4T enables the use of MVC frameworks (through MVC based interfaces) in Java and .NET by translating SDL Tridion components to MVC components." />
+    <meta property="og:image:url" content="http://dd4t.org/assets/img/logo_black.png" />
+    <meta property="og:image:url" content="http://dd4t.org/assets/img/logo_white.png" />
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:title" content="DD4T" />
+    <meta name="twitter:description" content="DD4T enables the use of MVC frameworks (through MVC based interfaces) in Java and .NET by translating SDL Tridion components to MVC components." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="http://dd4t.org/assets/img/logo_black.png" />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="DD4T enables the use of MVC frameworks (through MVC based interfaces) in Java and .NET by translating SDL Tridion components to MVC components." />
+    <link rel="canonical" href="http://dd4t.org/" />
+
+    <meta name="language" content="en" />
+
+    <title>DD4T - Release 2.1</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/freelancer.css" rel="stylesheet">
+    <link href="assets/css/dd4t.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" <!-- Favicon -->
+    <link href="/favicon.png" rel="icon" type="image/x-icon" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#page-top">DD4T</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="/#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#gettingstarted">Getting started</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#features">Features</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#download">Download</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#releases">Releases</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#contribute">Contribute</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <!-- Header -->
+    <header>
+
+
+    </header>
+    <section id="releases">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Releases</h1>
+                    <hr class="star-primary">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Release 2.1</h3>
+                    <h4>Platform</h4>
+                    This release contains .NET packages and Tridion templates.
+
+                    <h4>New features</h4>
+                    <h5>SDL Web 8 support</h5>
+                    SDL Web 8 (the latest version of Tridion) is supported in 2 ways:
+                    <ul>
+                        <li>Through the microservices API (aka the Content Interaction Library). To use this approach, you reference the package DD4T.Providers.SDLWeb8.CIL</li>
+                        <li>Through the in-process API. To use this approach, create a reference to the package DD4T.Providers.SDLWeb8</li>
+                    </ul>
+
+                    Note that the introduction of the Content Interaction Library makes the DD4T Restservice and Rest provider obsolete. We recommend these features only for SDL Tridion 2013sp1 and older.
+
+                    <h5>Binary caching</h5>
+                    Binaries (images etcetera published from Tridion) are now cached in the same way as pages and component presentations. They are cached with a dependency on the underlying multimedia component. If you are using cache invalidation(see next topic), binaries
+                    are now automatically removed from the cache as soon as the multimedia component is published or unpublished.
+
+                    <h5>Cache invalidation</h5>
+                    Cache invalidation is removed from the core and moved into a separate package DD4T.Caching.ApacheMQ. You need to add a reference to that package if you want to continue to use this feature. Cache invalidation messages from Apache MQ are now received on
+                    the main thread of the application, instead of on a separate thread. We also upgraded to Apache.NMS 1.7.1.
+
+                    <h5>Removed mandatory dependency on Log4net</h5>
+                    Previous versions had a mandatory dependency on Log4net. This dependency was removed from DD4T.Core. You can still let DD4T log using Log4net, by adding a package reference to DD4T.Logging.Log4net. No configuration is necessary. If you like NLog better,
+                    just add a package reference to DD4T.Logging.NLog. Or write your own implementation of the interface DD4T.ContentModel.Contracts.Logging.ILogger.
+
+                    <h5>PageFactory now caches null results</h5>
+                    If a page cannot be found, this 'null result' was never cached in previous versions of DD4T. This was a risk, because requests of non-existent pages would lead to (heavy) queries on the broker database every time. Now, this null result is cached for a
+                    limited time. This time (in seconds) can be configured in the appSettings setting of the Web.config as follows:
+                    <br/><pre>&lt;add key="DD4T.CacheSettings.Page404" value="60"/&gt; </pre><br/> If you leave this out, the null result is cached for 30 seconds.
+
+                    <h5>PDB</h5>
+                    Debug symbols are now packaged with DD4T, to make debugging considerably easier.
+
+                    <h5>Empty embedded fields</h5>
+                    A bug which caused publishing to fail if you tried to publish empty embedded fields while the 'Publish empty fields' setting was switched on, has been fixed.
+
+
+                    <br/><br/>
+                    <h4>Warning for users of DD4T for Java</h4>
+                    <b>Please use DD4T for Java version 2.0.6 or higher with the templates v 2.1!</b>
+
+                    <h4>NuGet packages</h4>
+                    <ul>
+                        <li>DD4T.Model</li>
+                        <li>DD4T.Core</li>
+                        <li>DD4T.MVC</li>
+                        <li>DD4T.DI.Unity</li>
+                        <li>DD4T.DI.Ninject</li>
+                        <li>DD4T.DI.Autofac</li>
+                        <li>DD4T.Providers.SDLTridion2011sp1</li>
+                        <li>DD4T.Providers.SDLTridion2013</li>
+                        <li>DD4T.Providers.SDLTridion2013sp1</li>
+                        <li>DD4T.Providers.SDLWeb8</li>
+                        <li>DD4T.Providers.SDLWeb8.CIL</li>
+                        <li>DD4T.Caching.ApacheMQ</li>
+                        <li>DD4T.Logging.Log4net</li>
+                        <li>DD4T.Logging.NLog</li>
+                        <li>DD4T.RestService.WebApi</li>
+                        <li>DD4T.Providers.Rest</li>
+                    </ul>
+
+                    <h4>Download</h4>
+                    <ul>
+                        <li>Download the templates: <a href="https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.1.2">https://github.com/dd4t/DD4T.TridionTemplates/releases/tag/2.1.2</a></li>
+                        <li>To use DD4T for .NET, reference the DD4T packages on <a href="https://www.nuget.org/profiles/dd4t">Nuget</a>, specifying version 2.1.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Blogs</h3>
+                        <p>Lot's of people are blogging about DD4T. Find out who.</p>
+                        <a href="#blogsModal" class="btn btn-lg btn-outline" data-toggle="modal">
+                            Read more
+                        </a>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://dd4t.slack.com" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-slack"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://tridion.stackexchange.com/?tags=dd4t" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-stack-exchange"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/dd4t" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Community</h3>
+                        <p>DD4T is a framework built by the community for the community. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Available free under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="assets/js/jqBootstrapValidation.js"></script>
+    <script src="assets/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/freelancer.js"></script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66971120-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
