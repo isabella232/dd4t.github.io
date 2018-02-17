@@ -159,6 +159,37 @@
                     <img src="/assets/img/DXA-2.0.png" alt="DXA is a web application,  while DD4T is a framework.">
                     <p>DXA is a web application, while DD4T is a framework.</p>
                   </div>
+				  
+				  <p>
+				  The end goal is to have a system that is both a framework, and a ready-to-roll application in one. This will be achieved later, probably in DXA 2.1, and it will look something like this:
+				  </p>
+
+                  <div class="figure">
+                    <img src="/assets/img/DXA-2.0-Core.png" alt="Soon DXA will be both an application and a framework!">
+                    <p>Soon DXA will be both an application and a framework!</p>
+                  </div>
+				  
+				  <h3>Backwards compatibility</h3>
+				  <p>
+				  To provide a smooth upgrade path from DD4T to DXA 2, SDL put a lot of effort into making DXA 2 backwards compatible on the data level. This means two things:
+				  <ul>
+					<li>a DXA 2 application can consume DD4T data</li>
+					<li>a DD4T application can consume DXA 2 data, IF it uses the model service</li>
+				  </ul>
+				  
+				  On the level of code, DXA 2 is not yet backwards compatible with DD4T. If you have extended or otherwise customized many DD4T classes, such as controllers, factories, resolvers or cache agents, we advise you to wait for a future release of DXA which will support most of this.
+				  </p>
+
+				  <h3>What can you do with it now?</h3>
+				  <p>
+ 				    With the advent of DXA 2, DD4T users have a number of options:
+				    <ul>
+					  <li>They can keep their DD4T application but start using the model service – and gain important performance benefits</li>
+					  <li>They can rebuild their application on DXA, without having to republish</li>
+					  <li>They can do nothing and everything will stay as it is</li>
+					</ul>
+					For most organizations, rebuilding the application will be too big of an effort. But switching to the model service is easy, as you can read here. We would recommend everybody to consider this possibility. 
+				  </p>				  
               </div>
           </div>   
         </div>
